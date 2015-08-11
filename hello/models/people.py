@@ -1,9 +1,7 @@
 import logging
 import datetime
 
-logging.info("import hello.app before")
 from hello.app import flask_SQA
-logging.info("import hello.app after")
 
 
 class People(flask_SQA.Model):

@@ -1,6 +1,3 @@
-##from __future__ import print_function
-
-
 # Configure logging
 
 import logging
@@ -15,13 +12,10 @@ rootLogger.addHandler(handler)
 logging.info("This is a test")
 
 
-# Get the main Flask app/api objects, add routes
+# Add routes to Flask app/api
 
 from hello.app import app, api
-
-logging.info("run.py: import resources.endpoints before")
 from hello.resources.endpoints import PeopleEndpoint
-logging.info("run.py: import resources.endpoints after")
 
 api.add_resource(PeopleEndpoint, '/people', '/people/<id>')
 

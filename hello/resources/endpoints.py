@@ -2,9 +2,7 @@ import logging
 
 from flask_restful import Resource
 
-logging.info("hello.models.people before")
 from hello.models.people import People
-logging.info("import hello.models.people after")
 
 
 class PeopleEndpoint(Resource):
@@ -24,7 +22,7 @@ class PeopleEndpoint(Resource):
     def post(self,id,**kwargs):
         logging.info("Received POST call with id={}", id)
         
-        return "People.post(); id = %s".format(id)
+        return { "id": id }
 
     
 if (__name__ == '__main__'):
