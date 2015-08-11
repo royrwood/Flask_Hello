@@ -1,10 +1,9 @@
-from __future__ import print_function
-
+import logging
 import datetime
 
-print("--> people.py: import hello.app before")
+logging.info("import hello.app before")
 from hello.app import flask_SQA
-print("--> people.py: import hello.app before")
+logging.info("import hello.app after")
 
 
 class People(flask_SQA.Model):
@@ -23,5 +22,8 @@ class People(flask_SQA.Model):
     
     
 if (__name__ == '__main__'):
-    for i,p in enumerate(People.query.all()):
-        print("{}: {}".format(i, p))
+    logging.info("Hello, %s",__file__)
+    
+##    for i,p in enumerate(People.query.all()):
+##        print("{}: {}".format(i, p))
+        

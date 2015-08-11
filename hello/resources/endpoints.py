@@ -1,33 +1,32 @@
-from __future__ import print_function
+import logging
 
 from flask_restful import Resource
 
-# print("--> endpoints.py: import hello.models.people before")
-# import hello.models.people
-# print("--> endpoints.py: import hello.models.people after")
-# print("dir(hello.models.people) = {}".format(dir(hello.models)))
-
-print("--> endpoints.py: hello.models.people import People before")
+logging.info("hello.models.people before")
 from hello.models.people import People
-# print("dir(People) = {}".format(dir(People)))
-print("--> endpoints.py: import hello.models.people after")
+logging.info("import hello.models.people after")
 
 
 class PeopleEndpoint(Resource):
     def get(self,**kwargs):
-        print("In People.get")
+        logging.info("Getting list of People")
         
         result = {}
         
         for i,p in enumerate(People.query.all()):
+            logging.info("Found a People = %s",str(p))
             result[str(i)] = str(p)
 
+        logging.info("Returning list of People")
+        
         return result
     
     def post(self,id,**kwargs):
-        print("In People.post; id = {}".format(id))
-        return "People.post(); id = {}".format(id)
+        logging.info("Received POST call with id={}", id)
+        
+        return "People.post(); id = %s".format(id)
 
     
 if (__name__ == '__main__'):
-    print("Hello endpoints.py")
+    logging.info("Hello, %s",__file__)
+    

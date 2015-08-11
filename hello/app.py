@@ -1,4 +1,4 @@
-from __future__ import print_function
+import logging
 
 from flask import Flask
 from flask_restful import Api
@@ -18,4 +18,5 @@ flask_SQA = SQLAlchemy(app)
 
 
 if (__name__=='__main__'):
-    print("Hello, world.")
+    logging.info("Hello, %s",__file__)
+    
