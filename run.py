@@ -1,9 +1,19 @@
 from __future__ import print_function
-import sys
 
+import sys
 print("sys.path = {}".format(sys.path))
 
-from hello.app import app
+from hello.app import app, api
+
+print("--> run.py: import resources.endpoints before")
+from hello.resources.endpoints import PeopleEndpoint
+print("--> run.py: import resources.endpoints after")
+
+print("--> run.py: hello.models.people import People before")
+from hello.models.people import People
+print("--> run.py: import hello.models.people after")
+
+api.add_resource(PeopleEndpoint, '/people', '/people/<id>')
 
 
 if __name__ == '__main__':

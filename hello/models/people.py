@@ -1,11 +1,6 @@
 from __future__ import print_function
 
-print("--> people.py")
-
 import datetime
-
-# import sys
-# print("sys.path = {}".format(sys.path))
 
 print("--> people.py: import hello.app before")
 from hello.app import flask_SQA
@@ -28,10 +23,5 @@ class People(flask_SQA.Model):
     
     
 if (__name__ == '__main__'):
-    
-##    new_people = People("Peter", "Harrison")
-##    flask_SQA.session.add(new_people)
-##    flask_SQA.session.commit()
-    
     for i,p in enumerate(People.query.all()):
         print("{}: {}".format(i, p))
