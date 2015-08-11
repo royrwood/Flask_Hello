@@ -4,7 +4,13 @@ import datetime
 from hello.app import flask_SQA
 
 
+# Interesting-- looks like SQA supports automatic setting of the timestamp....
+# date_modified = db.Column(db.DateTime,  default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
+
+
 class People(flask_SQA.Model):
+    __tablename__ = "people"
+    
     id = flask_SQA.Column(flask_SQA.Integer, primary_key=True)
     firstname = flask_SQA.Column(flask_SQA.String)
     lastname = flask_SQA.Column(flask_SQA.String)
