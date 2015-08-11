@@ -17,6 +17,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://rrwood:rrwood!@localhost/h
 flask_SQA = SQLAlchemy(app)
 
 
+# Route resources
+
+from hello.resources.endpoints import PeopleEndpoint
+
+api.add_resource(PeopleEndpoint, '/people', '/people/<id>')
+
+
 if (__name__=='__main__'):
     logging.info("Hello, %s",__file__)
     

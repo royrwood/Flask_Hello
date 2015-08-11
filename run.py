@@ -4,21 +4,18 @@ import logging
 
 rootLogger = logging.getLogger()
 rootLogger.setLevel(logging.INFO)
+
 formatter = logging.Formatter('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s','%Y/%m/%d %H:%M:%S')
 handler = logging.StreamHandler()
 handler.setFormatter(formatter)
 rootLogger.addHandler(handler)
 
-logging.info("This is a test")
 
+# Pull in the actual Flask app
 
-# Add routes to Flask app/api
+logging.info("Importing main app")
 
 from hello.app import app, api
-from hello.resources.endpoints import PeopleEndpoint
-
-api.add_resource(PeopleEndpoint, '/people', '/people/<id>')
-
 
 
 if __name__ == '__main__':
@@ -34,6 +31,8 @@ if __name__ == '__main__':
     
     
     # Run the Flask app
+    
+    logging.info("Running main app")
     
     # app.run(host='0.0.0.0', port=8888, use_reloader=True)
     app.run(host='0.0.0.0', port=8888, use_reloader=False)
