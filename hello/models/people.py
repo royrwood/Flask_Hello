@@ -1,12 +1,15 @@
 from __future__ import print_function
 
+print("--> people.py")
+
 import datetime
 
-import sys
+# import sys
+# print("sys.path = {}".format(sys.path))
 
-print("sys.path = {}".format(sys.path))
-
+print("--> people.py: import hello.app before")
 from hello.app import flask_SQA
+print("--> people.py: import hello.app before")
 
 
 class People(flask_SQA.Model):
