@@ -9,6 +9,7 @@ print("dir(hello.models.people) = {}".format(dir(hello.models)))
 from hello.models.people import People
 print("dir(People) = {}".format(dir(People)))
 
+
 class PeopleEndpoint(Resource):
     def get(self,**kwargs):
         print("In People.get")
