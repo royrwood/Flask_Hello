@@ -10,7 +10,6 @@ The general structure is:
 .
 ├── hello
 │   ├── app.py
-│   ├── create_db.sql
 │   ├── __init__.py
 │   ├── models
 │   │   ├── __init__.py
@@ -19,5 +18,4 @@ The general structure is:
 │       ├── endpoints.py
 │       └── __init__.py
 └── run.py
-
 </pre>
