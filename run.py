@@ -13,7 +13,7 @@ rootLogger.addHandler(handler)
 
 # Pull in the actual Flask app
 
-logging.info("Importing main app")
+logging.info("Importing hello.app")
 
 from hello.app import app, api
 
