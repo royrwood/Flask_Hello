@@ -4,6 +4,9 @@ import datetime
 from hello.app import flask_SQA
 
 
+LOGGER = logging.getLogger(__name__)
+
+
 class People(flask_SQA.Model):
     __tablename__ = "people"
     
@@ -23,7 +26,7 @@ class People(flask_SQA.Model):
     
     
 if (__name__ == '__main__'):
-    logging.info("Hello, %s",__file__)
+    LOGGER.info("Hello, %s",__file__)
     
 ##    for i,p in enumerate(People.query.all()):
 ##        print("{}: {}".format(i, p))
