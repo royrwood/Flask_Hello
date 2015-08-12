@@ -10,19 +10,14 @@ The general structure is:
 .
 ├── hello
 │   ├── app.py
-│   ├── app.pyc
 │   ├── create_db.sql
 │   ├── __init__.py
-│   ├── __init__.pyc
 │   ├── models
 │   │   ├── __init__.py
-│   │   ├── __init__.pyc
-│   │   ├── people.py
-│   │   └── people.pyc
+│   │   └── people.py
 │   └── resources
 │       ├── endpoints.py
-│       ├── endpoints.pyc
-│       ├── __init__.py
-│       └── __init__.pyc
+│       └── __init__.py
 └── run.py
+
 </pre>
