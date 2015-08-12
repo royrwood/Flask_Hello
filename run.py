@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 # Configure logging
 
 import logging
