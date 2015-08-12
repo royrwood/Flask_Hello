@@ -5,13 +5,7 @@
 
 import logging
 
-rootLogger = logging.getLogger()
-rootLogger.setLevel(logging.INFO)
-
-formatter = logging.Formatter('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s','%Y/%m/%d %H:%M:%S')
-handler = logging.StreamHandler()
-handler.setFormatter(formatter)
-rootLogger.addHandler(handler)
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s", datefmt="%Y/%m/%d %H:%M:%S")
 
 
 # Pull in the actual Flask app
