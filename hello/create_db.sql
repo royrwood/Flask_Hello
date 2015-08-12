@@ -1,8 +1,8 @@
-# psql -d helloflask -a -f create_db.sql
-#
-# pg_ctl -o "-F -p 12345" start
-# sudo /etc/init.d/postgresql start|stop|restart
-#
+-- psql -d helloflask -a -f create_db.sql
+--
+-- pg_ctl -o "-F -p 12345" start
+-- sudo /etc/init.d/postgresql start|stop|restart
+--
 
 CREATE TABLE IF NOT EXISTS people(id serial primary key, firstname varchar(255), lastname varchar(255), tstamp timestamp default current_timestamp);
 CREATE TABLE IF NOT EXISTS address(id serial primary key, people_id int, street varchar(255), city varchar(255));
