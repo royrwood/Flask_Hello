@@ -6,6 +6,7 @@ It demonstrates how to structure a Flask-REST app in a reasonable way, and how t
 
 The general structure is:
 
+<pre>
 .
 ├── hello
 │   ├── app.py
@@ -24,3 +25,4 @@ The general structure is:
 │       ├── __init__.py
 │       └── __init__.pyc
 └── run.py
+</pre>
