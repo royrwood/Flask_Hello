@@ -12,7 +12,7 @@ INSERT INTO people(firstname,lastname) VALUES('Roy','Wood');
 INSERT INTO people(firstname,lastname) VALUES('Bart','Simpson');
 INSERT INTO people(firstname,lastname) VALUES('Clarus','Dogcow');
 
-INSERT INTO address(people_id,street,city) SELECT id,'51 Brentwood Crescent','London' FROM people WHERE firstname='Roy' AND lastname='Wood';
+INSERT INTO address(people_id,street,city) SELECT id,'1074 Dearness Drive','London' FROM people WHERE firstname='Roy' AND lastname='Wood';
 INSERT INTO address(people_id,street,city) SELECT id,'742 Evergreen Terrace','Springfield' FROM people WHERE firstname='Bart' AND lastname='Simpson';
 INSERT INTO address(people_id,street,city) SELECT id,'1 Infinite Loop','Cupertino' FROM people WHERE firstname='Clarus' AND lastname='Dogcow';
 
