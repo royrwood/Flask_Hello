@@ -1,11 +1,15 @@
 import logging
 
+import flask
 from flask_restful import Resource
 
 from hello.models.people import People
 
 
 class PeopleEndpoint(Resource):
+    
+    # Test with: curl -X GET -H "Accept: application/json" http://localhost:8888/people
+    
     def get(self,**kwargs):
         logging.info("Getting list of People")
         
@@ -19,8 +23,19 @@ class PeopleEndpoint(Resource):
         
         return result
     
-    def post(self,id,**kwargs):
-        logging.info("Received POST call with id={}", id)
+    
+    # Test with: curl -X POST -H "Content-Type: application/json" -d '{ "test":"data","foo":"bar" }' http://localhost:8888/people
+    
+    def post(self,id=None,**kwargs):
+        logging.info("Received POST call with id=%s", id)
+        
+        try:
+            json_data = flask.request.get_json()
+            logging.info("Parsed incoming JSON: %s", json_data)
+        
+        except:
+            logging.info("Could not parse incoming JSON data")
+        
         
         return { "id": id }
 
