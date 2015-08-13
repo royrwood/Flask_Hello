@@ -11,6 +11,9 @@ CREATE TABLE IF NOT EXISTS bikes(id serial primary key, people_id integer, descr
 INSERT INTO people(firstname,lastname) VALUES('Roy','Wood');
 INSERT INTO people(firstname,lastname) VALUES('Bart','Simpson');
 INSERT INTO people(firstname,lastname) VALUES('Clarus','Dogcow');
+INSERT INTO people(firstname,lastname) VALUES('Russell','Wilson');
+INSERT INTO people(firstname,lastname) VALUES('Tom','Brady');
+INSERT INTO people(firstname,lastname) VALUES('Bradley','Wiggens');
 
 INSERT INTO address(people_id,street,city) SELECT id,'1074 Dearness Drive','London' FROM people WHERE firstname='Roy' AND lastname='Wood';
 INSERT INTO address(people_id,street,city) SELECT id,'742 Evergreen Terrace','Springfield' FROM people WHERE firstname='Bart' AND lastname='Simpson';
