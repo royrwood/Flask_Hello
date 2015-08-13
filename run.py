@@ -14,7 +14,7 @@ LOGGER = logging.getLogger(__name__)
 
 LOGGER.info("Importing hello.app")
 
-from hello.app import app, api
+from hello.app import app
 
 
 if __name__ == '__main__':
