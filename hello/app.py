@@ -34,5 +34,5 @@ api.add_resource(PeopleEndpoint, '/people', '/people/<id>')
 
 
 if (__name__=='__main__'):
-    logging.info("Hello, %s",__file__)
+    LOGGER.info("Hello, %s",__file__)
     
