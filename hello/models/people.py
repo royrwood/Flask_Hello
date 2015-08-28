@@ -13,7 +13,6 @@ class People(flask_SQA.Model):
     id = flask_SQA.Column(flask_SQA.Integer, primary_key=True)
     firstname = flask_SQA.Column(flask_SQA.String)
     lastname = flask_SQA.Column(flask_SQA.String)
-    # tstamp = flask_SQA.Column(flask_SQA.TIMESTAMP)
     tstamp = flask_SQA.Column(flask_SQA.DateTime, default=flask_SQA.func.current_timestamp(), onupdate=flask_SQA.func.current_timestamp())
 
     def __init__(self, firstname, lastname, tstamp = datetime.datetime.utcnow()):
