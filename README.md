@@ -8,14 +8,15 @@ The general structure is:
 
 <pre>
 .
+├── run.py
+│
 ├── hello
-│   ├── app.py
 │   ├── __init__.py
+│   ├── app.py
 │   ├── models
 │   │   ├── __init__.py
 │   │   └── people.py
 │   └── resources
-│       ├── endpoints.py
-│       └── __init__.py
-└── run.py
+│       ├── __init__.py
+│       └── endpoints.py
 </pre>
