@@ -9,6 +9,9 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Create our Flask app and REST API
+#  Note that we need to create app before we import our endpoints since they import the data models,
+#  and the data models import and refer to app.  This circular reference works as long as we define
+#  app before importing the endpoints and models!
 
 LOGGER.info("Creating Flask app and api")
 
