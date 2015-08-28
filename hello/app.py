@@ -9,7 +9,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Create our Flask app and REST API
-#  Note that we need to create app before we import our endpoints since they import the data models,
+#  Note that we need to create 'app' before we import our endpoints since they import the data models,
 #  and the data models import and refer to app.  This circular reference works as long as we define
 #  app before importing the endpoints and models!
 
@@ -30,6 +30,10 @@ flask_SQA = SQLAlchemy(app)
 # Route resources
 
 LOGGER.info("Configuring REST endpoints and routes")
+
+# Since 'app' is created above, it is safe to import the endpoint code.  This endpoint code in-turn
+# imports 'app' from this file in a case of circular includes; however, since we have defined 'app'
+# before we start the circular include, we are okay...
 
 from hello.resources.endpoints import PeopleEndpoint
 
