@@ -15,7 +15,10 @@ class People(flask_SQA.Model):
     lastname = flask_SQA.Column(flask_SQA.String)
     tstamp = flask_SQA.Column(flask_SQA.DateTime, default=flask_SQA.func.current_timestamp(), onupdate=flask_SQA.func.current_timestamp())
 
-    def __init__(self, firstname, lastname, tstamp = datetime.datetime.utcnow()):
+    def __init__(self, firstname, lastname, tstamp = None):
+        if tstamp is None:
+            tstamp = datetime.datetime.utcnow()
+        
         self.firstname = firstname
         self.lastname = lastname
         self.tstamp = tstamp
