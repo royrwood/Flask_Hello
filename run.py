@@ -22,11 +22,11 @@ if __name__ == '__main__':
     
     from os import environ
     
-    if 'WINGDB_ACTIVE' in environ:
-        LOGGER.info("Disabling Flask debugging")
-        app.debug = False
-    else:
-        LOGGER.info("Flask debugging left enabled")
+#    if 'WINGDB_ACTIVE' in environ:
+#        LOGGER.info("Disabling Flask debugging")
+#        app.debug = False
+#    else:
+#        LOGGER.info("Flask debugging left enabled")
     
     
     # Run the Flask app
