@@ -20,3 +20,6 @@ The general structure is:
 │       ├── __init__.py
 │       └── endpoints.py
 </pre>
+
+.
+
