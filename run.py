@@ -18,16 +18,6 @@ from hello.app import app
 
 
 if __name__ == '__main__':
-    LOGGER.info("Checking for WINGDB_ACTIVE")
-    
-    from os import environ
-    
-#    if 'WINGDB_ACTIVE' in environ:
-#        LOGGER.info("Disabling Flask debugging")
-#        app.debug = False
-#    else:
-#        LOGGER.info("Flask debugging left enabled")
-    
     
     # Run the Flask app
     
